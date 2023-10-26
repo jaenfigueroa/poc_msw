@@ -1,7 +1,15 @@
+import { useEffect } from 'react'
+
 function App() {
+  useEffect(() => {
+    fetch('/api/user/abc-123')
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+  }, [])
+
   return (
     <div>
-      <p className='title'>Industry Standard</p>
+      <p>Hola mundo</p>
     </div>
   )
 }
