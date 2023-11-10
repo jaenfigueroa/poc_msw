@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 
 function App() {
   useEffect(() => {
-    fetch('/api/user/abc-123')
-      .then((res) => res.json())
-      .then((data) => console.log(data))
+    fetch('/users')
+      .then((response) => response.json())
+      .then((json) => console.log(json))
   }, [])
 
   return (
